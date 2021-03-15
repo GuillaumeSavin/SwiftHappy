@@ -23,12 +23,16 @@ class QuestionViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let hvc = segue.destination as? HappinessViewController {
             if let identifier = segue.identifier {
+                switch identifier {
                 case "cool":
-                hvc.allegresse = 100
+                    hvc.allegresse = 100
                 case "bof":
-                hvc.alegresse = 50
+                    hvc.allegresse = 50
                 case "nul":
-                hvc.alegresse = 0
+                    hvc.allegresse = 0
+                default:
+                    break
+                }                
             }
         }
         // Get the new view controller using segue.destination.
