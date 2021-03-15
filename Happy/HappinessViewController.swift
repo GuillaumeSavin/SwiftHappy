@@ -25,6 +25,7 @@ class HappinessViewController: UIViewController, FaceViewDataSource {
     }
     
     func updateUI() {
+        title = "Happiness = \(allegresse)"
         faceView?.setNeedsDisplay()
     }
 

@@ -14,7 +14,7 @@
                 <splitViewController allowDoubleColumnStyle="YES" id="buu-Y1-lUk" sceneMemberID="viewController">
                     <connections>
                         <segue destination="jAN-nd-Jn2" kind="relationship" relationship="masterViewController" id="Xbg-SE-6zi"/>
-                        <segue destination="6aY-jC-IBK" kind="relationship" relationship="detailViewController" id="KWG-ED-u1l"/>
+                        <segue destination="i9C-t2-ffs" kind="relationship" relationship="detailViewController" id="KWG-ED-u1l"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbd-WU-VwH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -54,15 +54,16 @@
                             <constraint firstItem="OY8-ui-98h" firstAttribute="leading" secondItem="KNA-kW-0LX" secondAttribute="leadingMargin" id="vqL-hr-Hl7"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="G9t-E9-ug0"/>
                     <connections>
                         <outlet property="faceView" destination="OY8-ui-98h" id="hN8-OM-Jtr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Lp-hT-eeB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-949" y="194"/>
+            <point key="canvasLocation" x="143" y="194"/>
         </scene>
-        <!--Répondez à la question-->
+        <!--Répondez-->
         <scene sceneID="UOI-YD-QMC">
             <objects>
                 <viewController id="GhL-cz-mu8" customClass="QuestionViewController" customModule="Happy" customModuleProvider="target" sceneMemberID="viewController">
@@ -87,7 +88,7 @@
                                 </constraints>
                                 <state key="normal" title="Cool"/>
                                 <connections>
-                                    <segue destination="6aY-jC-IBK" kind="showDetail" identifier="Cool" id="V8I-7c-DhH"/>
+                                    <segue destination="i9C-t2-ffs" kind="showDetail" identifier="Cool" id="V8I-7c-DhH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YW3-vf-GVS">
@@ -98,7 +99,7 @@
                                 </constraints>
                                 <state key="normal" title="Bof"/>
                                 <connections>
-                                    <segue destination="6aY-jC-IBK" kind="showDetail" identifier="Bof" id="4hB-Uh-YXS"/>
+                                    <segue destination="i9C-t2-ffs" kind="showDetail" identifier="Bof" id="4hB-Uh-YXS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcg-ii-KTv">
@@ -109,7 +110,20 @@
                                 </constraints>
                                 <state key="normal" title="Nul"/>
                                 <connections>
-                                    <segue destination="6aY-jC-IBK" kind="showDetail" identifier="Nul" id="MgG-UM-AHn"/>
+                                    <segue destination="i9C-t2-ffs" kind="showDetail" identifier="Nul" id="MgG-UM-AHn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cck-Tr-ZJS">
+                                <rect key="frame" x="167" y="543" width="80" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="lCx-zY-iby"/>
+                                    <constraint firstAttribute="width" constant="80" id="x01-fo-ji0"/>
+                                </constraints>
+                                <state key="normal" title="Passe">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="rien:" destination="GhL-cz-mu8" eventType="touchUpInside" id="3ja-4q-oZR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -123,11 +137,16 @@
                             <constraint firstItem="IFZ-8a-RCT" firstAttribute="top" secondItem="P0P-C7-XRL" secondAttribute="top" id="OC1-Qo-Gir"/>
                             <constraint firstItem="YW3-vf-GVS" firstAttribute="centerY" secondItem="QJc-CV-O7D" secondAttribute="centerY" id="aBf-xu-nXb"/>
                             <constraint firstItem="YW3-vf-GVS" firstAttribute="centerX" secondItem="QJc-CV-O7D" secondAttribute="centerX" id="fWO-NW-XHJ"/>
+                            <constraint firstItem="Cck-Tr-ZJS" firstAttribute="centerX" secondItem="QJc-CV-O7D" secondAttribute="centerX" id="mJG-q8-sCL"/>
                             <constraint firstItem="Mcg-ii-KTv" firstAttribute="top" secondItem="YW3-vf-GVS" secondAttribute="bottom" constant="10" id="rSa-ND-hCd"/>
                             <constraint firstItem="P0P-C7-XRL" firstAttribute="trailing" secondItem="IFZ-8a-RCT" secondAttribute="trailing" constant="20" id="uFu-T0-2Ax"/>
+                            <constraint firstItem="Cck-Tr-ZJS" firstAttribute="top" secondItem="Mcg-ii-KTv" secondAttribute="bottom" constant="10" id="vBs-BX-Zg6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Répondez à la question" id="BKk-JX-cZA"/>
+                    <navigationItem key="navigationItem" title="Répondez" id="BKk-JX-cZA"/>
+                    <connections>
+                        <segue destination="i9C-t2-ffs" kind="showDetail" identifier="rien" id="en0-mu-X4G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAi-ia-937" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,9 +170,27 @@
             </objects>
             <point key="canvasLocation" x="-949.27536231884062" y="-640.17857142857144"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DAN-54-OMe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="i9C-t2-ffs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kvd-y6-yk2">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6aY-jC-IBK" kind="relationship" relationship="rootViewController" id="o7z-AQ-3C9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Pk-iE-oz4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-683" y="194"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="V8I-7c-DhH"/>
+        <segue reference="en0-mu-X4G"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
@@ -161,6 +198,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
