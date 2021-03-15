@@ -60,9 +60,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Lp-hT-eeB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-949" y="48"/>
+            <point key="canvasLocation" x="-949" y="194"/>
         </scene>
-        <!--Question View Controller-->
+        <!--Répondez à la question-->
         <scene sceneID="UOI-YD-QMC">
             <objects>
                 <viewController id="GhL-cz-mu8" customClass="QuestionViewController" customModule="Happy" customModuleProvider="target" sceneMemberID="viewController">
@@ -86,6 +86,9 @@
                                     <constraint firstAttribute="width" constant="80" id="VWH-V9-UZ7"/>
                                 </constraints>
                                 <state key="normal" title="Cool"/>
+                                <connections>
+                                    <segue destination="6aY-jC-IBK" kind="showDetail" identifier="Cool" id="V8I-7c-DhH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YW3-vf-GVS">
                                 <rect key="frame" x="167" y="423" width="80" height="50"/>
@@ -94,6 +97,9 @@
                                     <constraint firstAttribute="height" constant="50" id="t4k-cu-0of"/>
                                 </constraints>
                                 <state key="normal" title="Bof"/>
+                                <connections>
+                                    <segue destination="6aY-jC-IBK" kind="showDetail" identifier="Bof" id="4hB-Uh-YXS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcg-ii-KTv">
                                 <rect key="frame" x="167" y="483" width="80" height="50"/>
@@ -102,6 +108,9 @@
                                     <constraint firstAttribute="height" constant="50" id="rf1-iq-XPg"/>
                                 </constraints>
                                 <state key="normal" title="Nul"/>
+                                <connections>
+                                    <segue destination="6aY-jC-IBK" kind="showDetail" identifier="Nul" id="MgG-UM-AHn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P0P-C7-XRL"/>
@@ -118,7 +127,7 @@
                             <constraint firstItem="P0P-C7-XRL" firstAttribute="trailing" secondItem="IFZ-8a-RCT" secondAttribute="trailing" constant="20" id="uFu-T0-2Ax"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="BKk-JX-cZA"/>
+                    <navigationItem key="navigationItem" title="Répondez à la question" id="BKk-JX-cZA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAi-ia-937" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -143,6 +152,9 @@
             <point key="canvasLocation" x="-949.27536231884062" y="-640.17857142857144"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="V8I-7c-DhH"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
