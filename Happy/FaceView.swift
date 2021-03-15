@@ -91,13 +91,13 @@ class FaceView: UIView {
         
         var basBoucheG : CGPoint {
             get {
-                return CGPoint(x: faceCenter.x - 0.25 * faceRadius, y: (faceCenter.y + 0.3 * faceRadius) * happiness! )
+                return CGPoint(x: faceCenter.x - 0.25 * faceRadius, y: (faceCenter.y + 0.3 * faceRadius) + (0.3 * happiness! * faceRadius) )
             }
         }
         
         var basBoucheD : CGPoint {
             get {
-                return CGPoint(x: faceCenter.x + 0.25 * faceRadius, y: (faceCenter.y + 0.3 * faceRadius) * happiness!)
+                return CGPoint(x: faceCenter.x + 0.25 * faceRadius, y: (faceCenter.y + 0.3 * faceRadius) + (0.3 * happiness! * faceRadius))
             }
         }
         
