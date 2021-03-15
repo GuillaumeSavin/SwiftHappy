@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0BE8D925FF457200025639 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0BE8D825FF457200025639 /* QuestionViewController.swift */; };
 		CE1B300325F60B6700451E1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1B300225F60B6700451E1E /* AppDelegate.swift */; };
 		CE1B300525F60B6700451E1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1B300425F60B6700451E1E /* SceneDelegate.swift */; };
 		CE1B300A25F60B6700451E1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1B300825F60B6700451E1E /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE0BE8D825FF457200025639 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		CE1B2FFF25F60B6700451E1E /* Happy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Happy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1B300225F60B6700451E1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE1B300425F60B6700451E1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				CE1B301025F60B6900451E1E /* Info.plist */,
 				CE1B301825F60CB000451E1E /* HappinessViewController.swift */,
 				CE1B301B25F60DFD00451E1E /* FaceView.swift */,
+				CE0BE8D825FF457200025639 /* QuestionViewController.swift */,
 			);
 			path = Happy;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE1B300325F60B6700451E1E /* AppDelegate.swift in Sources */,
+				CE0BE8D925FF457200025639 /* QuestionViewController.swift in Sources */,
 				CE1B301925F60CB000451E1E /* HappinessViewController.swift in Sources */,
 				CE1B300525F60B6700451E1E /* SceneDelegate.swift in Sources */,
 				CE1B301C25F60DFD00451E1E /* FaceView.swift in Sources */,

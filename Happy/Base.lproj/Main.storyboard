@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6aY-jC-IBK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="buu-Y1-lUk">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,6 +8,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Split View Controller-->
+        <scene sceneID="zYG-1Z-Gfw">
+            <objects>
+                <splitViewController allowDoubleColumnStyle="YES" id="buu-Y1-lUk" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="jAN-nd-Jn2" kind="relationship" relationship="masterViewController" id="Xbg-SE-6zi"/>
+                        <segue destination="6aY-jC-IBK" kind="relationship" relationship="detailViewController" id="KWG-ED-u1l"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wbd-WU-VwH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2428" y="-389"/>
+        </scene>
         <!--Happiness View Controller-->
         <scene sceneID="wPo-eB-tg4">
             <objects>
@@ -17,7 +30,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="OY8-ui-98h" customClass="FaceView" customModule="Happy" customModuleProvider="target">
-                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <rect key="frame" x="20" y="88" width="374" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
@@ -47,7 +60,87 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Lp-hT-eeB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1000" y="-29"/>
+            <point key="canvasLocation" x="-949" y="48"/>
+        </scene>
+        <!--Question View Controller-->
+        <scene sceneID="UOI-YD-QMC">
+            <objects>
+                <viewController id="GhL-cz-mu8" customClass="QuestionViewController" customModule="Happy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QJc-CV-O7D">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Que pensez-vous de votre Formation ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFZ-8a-RCT">
+                                <rect key="frame" x="20" y="88" width="374" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="RDF-Ep-pHA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FV1-2O-3f0">
+                                <rect key="frame" x="167" y="363" width="80" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="T98-Bu-08s"/>
+                                    <constraint firstAttribute="width" constant="80" id="VWH-V9-UZ7"/>
+                                </constraints>
+                                <state key="normal" title="Cool"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YW3-vf-GVS">
+                                <rect key="frame" x="167" y="423" width="80" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Trh-4U-j4M"/>
+                                    <constraint firstAttribute="height" constant="50" id="t4k-cu-0of"/>
+                                </constraints>
+                                <state key="normal" title="Bof"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcg-ii-KTv">
+                                <rect key="frame" x="167" y="483" width="80" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="c67-Pv-jCA"/>
+                                    <constraint firstAttribute="height" constant="50" id="rf1-iq-XPg"/>
+                                </constraints>
+                                <state key="normal" title="Nul"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P0P-C7-XRL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FV1-2O-3f0" firstAttribute="centerX" secondItem="QJc-CV-O7D" secondAttribute="centerX" id="CVH-do-Iwd"/>
+                            <constraint firstItem="IFZ-8a-RCT" firstAttribute="leading" secondItem="P0P-C7-XRL" secondAttribute="leading" constant="20" id="GeT-3r-BiW"/>
+                            <constraint firstItem="YW3-vf-GVS" firstAttribute="top" secondItem="FV1-2O-3f0" secondAttribute="bottom" constant="10" id="GyL-L0-hFp"/>
+                            <constraint firstItem="Mcg-ii-KTv" firstAttribute="centerX" secondItem="QJc-CV-O7D" secondAttribute="centerX" id="IMJ-HP-urn"/>
+                            <constraint firstItem="IFZ-8a-RCT" firstAttribute="top" secondItem="P0P-C7-XRL" secondAttribute="top" id="OC1-Qo-Gir"/>
+                            <constraint firstItem="YW3-vf-GVS" firstAttribute="centerY" secondItem="QJc-CV-O7D" secondAttribute="centerY" id="aBf-xu-nXb"/>
+                            <constraint firstItem="YW3-vf-GVS" firstAttribute="centerX" secondItem="QJc-CV-O7D" secondAttribute="centerX" id="fWO-NW-XHJ"/>
+                            <constraint firstItem="Mcg-ii-KTv" firstAttribute="top" secondItem="YW3-vf-GVS" secondAttribute="bottom" constant="10" id="rSa-ND-hCd"/>
+                            <constraint firstItem="P0P-C7-XRL" firstAttribute="trailing" secondItem="IFZ-8a-RCT" secondAttribute="trailing" constant="20" id="uFu-T0-2Ax"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BKk-JX-cZA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tAi-ia-937" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-39.130434782608695" y="-640.17857142857144"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kZT-d6-WZb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jAN-nd-Jn2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aff-de-lIa">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GhL-cz-mu8" kind="relationship" relationship="rootViewController" id="x4B-hI-l3V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LJp-qc-p6P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-949.27536231884062" y="-640.17857142857144"/>
         </scene>
     </scenes>
     <resources>
