@@ -187,7 +187,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ciB-LP-80f">
-                                <rect key="frame" x="20" y="20" width="374" height="128"/>
+                                <rect key="frame" x="20" y="20" width="374" height="788"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -201,7 +201,7 @@
                             <constraint firstItem="ciB-LP-80f" firstAttribute="trailing" secondItem="cXO-Fm-98x" secondAttribute="trailingMargin" id="ONi-0a-Ubf"/>
                             <constraint firstItem="ciB-LP-80f" firstAttribute="top" secondItem="AHY-rF-2Lm" secondAttribute="top" constant="20" id="czV-qA-KAR"/>
                             <constraint firstItem="ciB-LP-80f" firstAttribute="leading" secondItem="cXO-Fm-98x" secondAttribute="leadingMargin" id="t1e-gH-EFm"/>
-                            <constraint firstItem="AHY-rF-2Lm" firstAttribute="bottom" secondItem="ciB-LP-80f" secondAttribute="bottom" constant="660" id="zwx-or-bPI"/>
+                            <constraint firstItem="AHY-rF-2Lm" firstAttribute="bottom" secondItem="ciB-LP-80f" secondAttribute="bottom" id="zwx-or-bPI"/>
                         </constraints>
                     </view>
                     <connections>

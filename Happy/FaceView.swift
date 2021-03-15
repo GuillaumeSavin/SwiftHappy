@@ -46,19 +46,6 @@ class FaceView: UIView {
         }
     }
     
-    var basBoucheG : CGPoint {
-        get {
-            return CGPoint(x: faceCenter.x - 0.25 * faceRadius, y: faceCenter.y + 0.3 * faceRadius )
-        }
-    }
-    
-    var basBoucheD : CGPoint {
-        get {
-            return CGPoint(x: faceCenter.x + 0.25 * faceRadius, y: faceCenter.y + 0.3 * faceRadius)
-        }
-    }
-    
-    
     var faceRadius : CGFloat {
         return scaling * (min(bounds.size.height, bounds.size.width) / 2)
     }
@@ -101,6 +88,18 @@ class FaceView: UIView {
         let oeilD = UIBezierPath(arcCenter: oeilD_Center, radius: yeuxRadius, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
         
         let happiness : CGFloat? = dataSource?.smilinessForFaceView(sender: self)
+        
+        var basBoucheG : CGPoint {
+            get {
+                return CGPoint(x: faceCenter.x - 0.25 * faceRadius, y: (faceCenter.y + 0.3 * faceRadius) * happiness! )
+            }
+        }
+        
+        var basBoucheD : CGPoint {
+            get {
+                return CGPoint(x: faceCenter.x + 0.25 * faceRadius, y: (faceCenter.y + 0.3 * faceRadius) * happiness!)
+            }
+        }
         
         let bouche = UIBezierPath()
         
