@@ -54,7 +54,15 @@
                             <constraint firstItem="OY8-ui-98h" firstAttribute="leading" secondItem="KNA-kW-0LX" secondAttribute="leadingMargin" id="vqL-hr-Hl7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="G9t-E9-ug0"/>
+                    <navigationItem key="navigationItem" id="G9t-E9-ug0">
+                        <barButtonItem key="rightBarButtonItem" title="Historique" id="fHk-eA-8YX">
+                            <connections>
+                                <segue destination="nY5-rM-Pzh" kind="popoverPresentation" identifier="showHistory" popoverAnchorBarButtonItem="fHk-eA-8YX" id="BdQ-l2-AST">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="faceView" destination="OY8-ui-98h" id="hN8-OM-Jtr"/>
                     </connections>
@@ -170,6 +178,40 @@
             </objects>
             <point key="canvasLocation" x="-949.27536231884062" y="-640.17857142857144"/>
         </scene>
+        <!--Text View Controller-->
+        <scene sceneID="Jzb-Ad-m3i">
+            <objects>
+                <viewController id="nY5-rM-Pzh" customClass="TextViewController" customModule="Happy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cXO-Fm-98x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ciB-LP-80f">
+                                <rect key="frame" x="20" y="20" width="374" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AHY-rF-2Lm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ciB-LP-80f" firstAttribute="trailing" secondItem="cXO-Fm-98x" secondAttribute="trailingMargin" id="ONi-0a-Ubf"/>
+                            <constraint firstItem="ciB-LP-80f" firstAttribute="top" secondItem="AHY-rF-2Lm" secondAttribute="top" constant="20" id="czV-qA-KAR"/>
+                            <constraint firstItem="ciB-LP-80f" firstAttribute="leading" secondItem="cXO-Fm-98x" secondAttribute="leadingMargin" id="t1e-gH-EFm"/>
+                            <constraint firstItem="AHY-rF-2Lm" firstAttribute="bottom" secondItem="ciB-LP-80f" secondAttribute="bottom" constant="660" id="zwx-or-bPI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="texte" destination="ciB-LP-80f" id="39a-4D-l2k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WMW-gh-y0M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953.62318840579712" y="193.52678571428569"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="DAN-54-OMe">
             <objects>
@@ -193,6 +235,9 @@
         <segue reference="en0-mu-X4G"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

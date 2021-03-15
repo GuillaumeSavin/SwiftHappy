@@ -13,12 +13,20 @@ class HappinessViewController: UIViewController, FaceViewDataSource {
         return CGFloat(allegresse - 50) / 50
     }
     
+    var histoireDesRéponses : [Int] {
+        get {
+        }
+        set {
+            
+        }
+    }
     
     //entre 0 = pas content et 100 = hyper content
     var allegresse : Int = 50 {
         didSet {
             allegresse = min(max(allegresse, 0), 100)
             print("allegresse = \(allegresse)")
+            histoireDesRéponses += [allegresse]
             updateUI()
             
         }
@@ -52,15 +60,17 @@ class HappinessViewController: UIViewController, FaceViewDataSource {
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let identifier = segue.identifier {
+            switch identifier {
+            case "showHistory":
+                if let tvc = segue.destination as? TextViewController {
+                    tvc.histoire += "\(histoireDesRéponses)"
+                }
+            default:
+                break
+            }
+        }
     }
-    */
 
 }

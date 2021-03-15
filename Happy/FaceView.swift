@@ -48,13 +48,13 @@ class FaceView: UIView {
     
     var basBoucheG : CGPoint {
         get {
-            return CGPoint(x: coinBoucheG.x + coinBoucheG.x / 2, y: faceCenter.y + 0.3 * faceRadius )
+            return CGPoint(x: faceCenter.x - 0.25 * faceRadius, y: faceCenter.y + 0.3 * faceRadius )
         }
     }
     
     var basBoucheD : CGPoint {
         get {
-            return CGPoint(x: coinBoucheD.x - coinBoucheD.x / 2, y: faceCenter.y + 0.3 * faceRadius)
+            return CGPoint(x: faceCenter.x + 0.25 * faceRadius, y: faceCenter.y + 0.3 * faceRadius)
         }
     }
     
@@ -120,7 +120,7 @@ class FaceView: UIView {
         visage.stroke()
         oeilG.stroke()
         oeilD.stroke()
-        bouche.stroke()
+        bouche.stroke()        
     }
     
     @objc func scale(gesture: UIPinchGestureRecognizer) {
