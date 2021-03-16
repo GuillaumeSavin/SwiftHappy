@@ -18,7 +18,7 @@ class TextViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading he view.
     }
     
     @IBOutlet weak var texte: UITextView! {
@@ -27,7 +27,6 @@ class TextViewController: UIViewController {
         }
     }
     
-
     /*
     // MARK: - Navigation
 

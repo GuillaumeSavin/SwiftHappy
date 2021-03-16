@@ -44,14 +44,29 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85Y-IZ-sId">
+                                <rect key="frame" x="167" y="782" width="80" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0oI-Jp-RZl"/>
+                                    <constraint firstAttribute="width" constant="80" id="6hP-Da-bn3"/>
+                                </constraints>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clear:" destination="6aY-jC-IBK" eventType="touchUpInside" id="Zxb-Ja-ik3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BZb-74-eZk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="OY8-ui-98h" firstAttribute="bottom" secondItem="BZb-74-eZk" secondAttribute="bottom" id="Fhm-U2-KEg"/>
-                            <constraint firstItem="OY8-ui-98h" firstAttribute="top" secondItem="BZb-74-eZk" secondAttribute="top" id="RaU-iL-jnh"/>
-                            <constraint firstItem="OY8-ui-98h" firstAttribute="trailing" secondItem="KNA-kW-0LX" secondAttribute="trailingMargin" id="hbR-wP-vlL"/>
-                            <constraint firstItem="OY8-ui-98h" firstAttribute="leading" secondItem="KNA-kW-0LX" secondAttribute="leadingMargin" id="vqL-hr-Hl7"/>
+                            <constraint firstItem="OY8-ui-98h" firstAttribute="top" secondItem="BZb-74-eZk" secondAttribute="top" id="1MF-qk-4Eu"/>
+                            <constraint firstItem="BZb-74-eZk" firstAttribute="bottom" secondItem="85Y-IZ-sId" secondAttribute="bottom" constant="30" id="1he-0X-w1h"/>
+                            <constraint firstItem="OY8-ui-98h" firstAttribute="centerX" secondItem="KNA-kW-0LX" secondAttribute="centerX" id="BBs-LB-cG0"/>
+                            <constraint firstItem="BZb-74-eZk" firstAttribute="trailing" secondItem="OY8-ui-98h" secondAttribute="trailing" constant="20" id="IEg-v1-ZYP"/>
+                            <constraint firstItem="85Y-IZ-sId" firstAttribute="centerX" secondItem="KNA-kW-0LX" secondAttribute="centerX" id="IP3-B1-aYI"/>
+                            <constraint firstItem="OY8-ui-98h" firstAttribute="centerX" secondItem="KNA-kW-0LX" secondAttribute="centerX" id="Ud9-ZI-K6l"/>
+                            <constraint firstItem="OY8-ui-98h" firstAttribute="leading" secondItem="BZb-74-eZk" secondAttribute="leading" constant="20" id="wHC-nS-0Op"/>
+                            <constraint firstItem="OY8-ui-98h" firstAttribute="bottom" secondItem="BZb-74-eZk" secondAttribute="bottom" id="yvx-Wt-ET4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="G9t-E9-ug0">
@@ -69,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Lp-hT-eeB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="143" y="194"/>
+            <point key="canvasLocation" x="140.57971014492756" y="193.52678571428569"/>
         </scene>
         <!--Répondez-->
         <scene sceneID="UOI-YD-QMC">

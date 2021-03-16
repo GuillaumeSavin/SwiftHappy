@@ -42,8 +42,6 @@ class HappinessViewController: UIViewController, FaceViewDataSource, UIPopoverPr
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     @IBOutlet weak var faceView: FaceView! {
@@ -81,5 +79,9 @@ class HappinessViewController: UIViewController, FaceViewDataSource, UIPopoverPr
     
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return UIModalPresentationStyle.none
+    }
+    
+    @IBAction func clear(_ sender: UIButton) {
+        histoireDesRéponses = []
     }
 }
